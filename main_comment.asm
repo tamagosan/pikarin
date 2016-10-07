@@ -72,7 +72,7 @@ LINELP					;ラベルLINELP
 	ANDLW	H'C0'		;ワーキングレジスタ(WORK<<1)と0xC0(0b11000000)の論理積をワーキングレジスタに格納
 	MOVWF	WORK		;ワーキングレジスタの内容((WORK << 1) & 0xC0)をファイルレジスタWORKに格納
 	MOVF	PBUFA,W		;ファイルレジスタPBUFAをワーキングレジスタに格納
-	ANDLW	H'3F'		;ワーキングレジスタ(PBUFA)と0x3F(0b00101111)の論理積をワーキングレジスタに格納
+	ANDLW	H'3F'		;ワーキングレジスタ(PBUFA)と0x3F(0b00111111)の論理積をワーキングレジスタに格納
 	IORWF	WORK,W		;ワーキングレジスタ(PBUFA & 0x3F)とファイルレジスタWORKの論理和をワーキングレジスタに格納
 	MOVWF	PBUFA		;ワーキングレジスタ((PBUFA & 0x3F) | ((WORK << 1) & 0xC0)をファイルレジスタPBUFAに格納
 ;**************OUTPUT DATA************
