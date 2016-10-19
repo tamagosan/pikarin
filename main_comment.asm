@@ -9,8 +9,8 @@
 	LINECNT			;Line Countの略だと思われる
 	EEADCNT			;EEPROM Address Countの略だと思われる
 	
-	PBUFA			;
-	PBUFB			;
+	PBUFA			;PORTA出力用バッファ
+	PBUFB			;PORTB出力用バッファ
 	
 	TIMCNT1			;Timer Count1
 	TIMCNT2			;Timer Count2
