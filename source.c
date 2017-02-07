@@ -15,10 +15,8 @@ void main(void){
         for(i=0;i<8;i++){
             for(j=0;j<16;j++){
                 //EEPROM TO PORT BUF
-                pbufa=eeprom_read(eeadcnt);
-                eeadcnt++;
-                pbufb=eeprom_read(eeadcnt);
-                eeadcnt++;
+                pbufa=eeprom_read(eeadcnt++);
+                pbufb=eeprom_read(eeadcnt++);
 
                 //CONVERT DATA PORT BUF
                 pbufa=(pbufa & 0x3f) | ((pbufa << 1) & 0xc0);
